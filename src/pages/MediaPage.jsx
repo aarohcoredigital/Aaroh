@@ -1,11 +1,7 @@
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Navbar } from "../components/Navbar";
-import { HeroBeam } from "../components/ui/HeroBeam";
-import { Footer } from "../components/Footer";
-import { IdleRobot } from "../components/ui/IdleRobot";
-import emailjs from "@emailjs/browser";
+import { Helmet } from "react-helmet-async";
 import {
     Film,
     TrendingUp,
@@ -16,6 +12,11 @@ import {
     AlertCircle,
     Check,
 } from "lucide-react";
+import { Navbar } from "../components/Navbar";
+import { HeroBeam } from "../components/ui/HeroBeam";
+import { Footer } from "../components/Footer";
+import { IdleRobot } from "../components/ui/IdleRobot";
+import emailjs from "@emailjs/browser";
 
 /* ─── EmailJS env ─── */
 const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -162,6 +163,11 @@ function MediaContact() {
 export function MediaPage() {
     return (
         <div className="bg-black min-h-screen w-full antialiased overflow-x-hidden selection:bg-cyan-500/20 relative">
+            <Helmet>
+                <title>Aaroh Studios | Video Production & Digital Marketing</title>
+                <meta name="description" content="Aaroh Studios - Cinematic video production, strategic digital marketing, and high-impact promotions." />
+                <link rel="canonical" href="https://www.aarohcoredigital.com/media" />
+            </Helmet>
             <div className="noise-overlay" />
             <Navbar />
 

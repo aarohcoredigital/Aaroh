@@ -1,5 +1,8 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
 import { Navbar } from "./components/Navbar";
 import { AboutUs } from "./components/AboutUs";
 import { Services } from "./components/Services";
@@ -11,9 +14,6 @@ import { HeroBeam } from "./components/ui/HeroBeam";
 import { IdleRobot } from "./components/ui/IdleRobot";
 import { Footer } from "./components/Footer";
 import { MediaPage } from "./pages/MediaPage";
-import { motion } from "framer-motion";
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -26,6 +26,11 @@ function ScrollToTop() {
 function HomePage() {
   return (
     <div className="bg-black w-full min-h-screen antialiased overflow-x-hidden selection:bg-cyan-500/30 relative">
+      <Helmet>
+        <title>Aaroh Core Digital | Transforming Visions into Reality</title>
+        <meta name="description" content="Aaroh Core Digital - Expert technology solutions, custom ecosystems, and digital engineering to scale your future." />
+        <link rel="canonical" href="https://www.aarohcoredigital.com/" />
+      </Helmet>
       <div className="noise-overlay" />
       <Navbar />
 
