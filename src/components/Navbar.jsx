@@ -37,7 +37,7 @@ export const Navbar = () => {
       )}
     >
       {/* Brand */}
-      <Link to="/" onClick={isHome ? scrollToTop : undefined} className="flex items-center gap-1 cursor-pointer group">
+      <Link to="/" onClick={isHome ? scrollToTop : undefined} className="flex items-center gap-1 cursor-pointer group" aria-label="Aaroh Core Digital Home">
         <div className="h-10 w-10 relative shrink-0 flex items-center justify-center -ml-2">
           <img 
             src="/logo.png" 

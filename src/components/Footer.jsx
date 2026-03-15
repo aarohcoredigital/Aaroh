@@ -46,7 +46,7 @@ export const Footer = () => {
           <div className="flex flex-col gap-6 lg:items-end">
             <span className="text-white font-mono text-[10px] uppercase tracking-[0.3em]">Origin</span>
             <div className="flex flex-col gap-1 lg:items-end text-sm text-neutral-500">
-              <span>Aaroh Core Digital</span>
+              <span>Aaroh Core Digital (Aaroh) Transforming ambitious visions into digital reality.</span>
               <span>India / IN</span>
               <span className="flex items-center gap-2 mt-4">
                 <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />

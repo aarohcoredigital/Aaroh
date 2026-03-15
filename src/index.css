@@ -6,12 +6,32 @@
   :root {
     --cursor-color: 34, 211, 238;
     /* Cyan for accents */
+    scroll-behavior: smooth;
   }
 
   body {
     /* bg-black sets the background. antialiased makes fonts crisp. */
     @apply bg-black text-white antialiased selection:bg-cyan-500/30 selection:text-white;
     overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  button, a {
+    touch-action: manipulation;
+  }
+
+  /* Hardware acceleration helper */
+  .smooth-gpu {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 
   /* Custom scrollbar for a sleek look */

@@ -15,6 +15,8 @@ import { IdleRobot } from "./components/ui/IdleRobot";
 import { Footer } from "./components/Footer";
 import { MediaPage } from "./pages/MediaPage";
 
+import ErrorBoundary from "./components/ErrorBoundary";
+
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -30,6 +32,22 @@ function HomePage() {
         <title>Aaroh Core Digital | Transforming Visions into Reality</title>
         <meta name="description" content="Aaroh Core Digital - Expert technology solutions, custom ecosystems, and digital engineering to scale your future." />
         <link rel="canonical" href="https://www.aarohcoredigital.com/" />
+        
+        {/* Organization Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Aaroh Core Digital",
+            "alternateName": ["Aaroh", "Aaroh Core"],
+            "url": "https://www.aarohcoredigital.com",
+            "logo": "https://www.aarohcoredigital.com/logo512.png",
+            "sameAs": [
+              "https://www.instagram.com/aaroh_core_digital",
+              "https://www.linkedin.com/company/aarohcoredigital"
+            ]
+          })}
+        </script>
       </Helmet>
       <div className="noise-overlay" />
       <Navbar />
@@ -46,8 +64,11 @@ function HomePage() {
             className="relative z-10 flex flex-col items-center justify-center text-center px-4"
           >
             <div className="flex flex-col items-center justify-center">
+              {/* Accessibility H1 for Search Engines */}
+              <h1 className="sr-only">Aaroh Core Digital</h1>
+              
               {/* Animated AAROH Letters Container */}
-              <h1 className="flex gap-2 md:gap-8 text-6xl sm:text-7xl md:text-[10rem] font-black uppercase leading-[0.8] mb-2" style={{ perspective: "1000px" }}>
+              <div className="flex gap-2 md:gap-8 text-6xl sm:text-7xl md:text-[10rem] font-black uppercase leading-[0.8] mb-2" style={{ perspective: "1000px" }} aria-hidden="true">
                 {['A', 'A', 'R', 'O', 'H'].map((letter, idx) => (
                   <motion.span 
                     key={idx} 
@@ -72,7 +93,7 @@ function HomePage() {
                     </span>
                   </motion.span>
                 ))}
-              </h1>
+              </div>
 
               <span className="text-3xl md:text-5xl text-neutral-200 mt-2 md:mt-4 font-normal tracking-[0.3em] uppercase drop-shadow-[0_0_15px_rgba(34,211,238,0.2)]">
                 CORE <span className="text-white font-bold">DIGITAL</span>
@@ -125,13 +146,13 @@ function HomePage() {
 
 function App() {
   return (
-    <>
+    <ErrorBoundary>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/media" element={<MediaPage />} />
       </Routes>
-    </>
+    </ErrorBoundary>
   );
 }
 

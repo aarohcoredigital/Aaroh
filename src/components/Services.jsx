@@ -11,7 +11,7 @@ import {
 
 export function Services() {
   return (
-    <div className="py-24 bg-black relative w-full overflow-hidden" id="services">
+    <div className="py-24 bg-black relative w-full overflow-hidden smooth-gpu" id="services">
       {/* Background Decorative Element: Orbital Rings */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/[0.03] rounded-full pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/[0.05] rounded-full pointer-events-none" />

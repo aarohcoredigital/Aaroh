@@ -32,6 +32,8 @@ const fadeUp = {
     }),
 };
 
+import ErrorBoundary from "../components/ErrorBoundary";
+
 /* ─── Service data ─── */
 const services = [
     {
@@ -162,70 +164,75 @@ function MediaContact() {
 /* ─── Main Page ─── */
 export function MediaPage() {
     return (
-        <div className="bg-black min-h-screen w-full antialiased overflow-x-hidden selection:bg-cyan-500/20 relative">
-            <Helmet>
-                <title>Aaroh Studios | Video Production & Digital Marketing</title>
-                <meta name="description" content="Aaroh Studios - Cinematic video production, strategic digital marketing, and high-impact promotions." />
-                <link rel="canonical" href="https://www.aarohcoredigital.com/media" />
-            </Helmet>
-            <div className="noise-overlay" />
-            <Navbar />
+        <ErrorBoundary>
+            <div className="bg-black min-h-screen w-full antialiased overflow-x-hidden selection:bg-cyan-500/20 relative">
+                <Helmet>
+                    <title>Aaroh Studios | Video Production & Digital Marketing</title>
+                    <meta name="description" content="Aaroh Studios - Cinematic video production, strategic digital marketing, and high-impact promotions." />
+                    <link rel="canonical" href="https://www.aarohcoredigital.com/media" />
+                </Helmet>
+                <div className="noise-overlay" />
+                <Navbar />
 
-            {/* ══════════════════════════════
-                HERO — Full viewport, cinematic
-            ══════════════════════════════ */}
-            <section className="h-screen w-full flex items-center justify-center bg-black/[0.96] relative overflow-hidden">
-
-
-                {/* Ambient colored glows */}
-                <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-cyan-500/8 blur-[180px] rounded-full pointer-events-none" />
-                <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-indigo-500/8 blur-[160px] rounded-full pointer-events-none" />
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none" />
-
-                {/* Hero Top Light Effect */}
-                <HeroBeam />
-
-                <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-6xl mx-auto">
+                {/* ══════════════════════════════
+                    HERO — Full viewport, cinematic
+                ══════════════════════════════ */}
+                <section className="h-screen w-full flex items-center justify-center bg-black/[0.96] relative overflow-hidden will-change-transform">
 
 
-                    {/* Main title — big animated letters like AAROH */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 40 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-                        className="flex flex-col items-center gap-2 mb-6"
-                    >
-                        <span className="text-xl md:text-2xl font-light tracking-[0.6em] uppercase text-neutral-500 mb-0">
-                            aaroh
-                        </span>
-                        {/* Animated STUDIOS Letters Container */}
-            <h1 className="flex gap-2 md:gap-8 text-5xl sm:text-7xl md:text-[10rem] font-black uppercase leading-[0.8] mb-4" style={{ perspective: "1000px" }}>
-                            {["S","T","U","D","I","O","S"].map((letter, idx) => (
-                                <motion.span 
-                                    key={idx}
-                                    className="relative inline-block group cursor-default drop-shadow-[0_10px_20px_rgba(0,0,0,1)]"
-                                    style={{ transformStyle: "preserve-3d" }}
-                                    whileHover={{ rotateY: 180 }}
-                                    transition={{
-                                        type: "spring",
-                                        stiffness: 120,
-                                        damping: 15,
-                                        mass: 1
-                                    }}
-                                >
-                                    <span className="block bg-clip-text text-transparent bg-gradient-to-b from-white via-neutral-100 to-neutral-400 group-hover:opacity-0 transition-opacity duration-300">
-                                        {letter}
-                                    </span>
-                                    <span 
-                                        className="absolute inset-0 bg-clip-text text-transparent bg-gradient-to-b from-cyan-300 via-indigo-300 to-emerald-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                                        style={{ transform: "rotateY(180deg)", backfaceVisibility: "hidden" }}
+                    {/* Ambient colored glows */}
+                    <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-cyan-500/8 blur-[180px] rounded-full pointer-events-none" />
+                    <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-indigo-500/8 blur-[160px] rounded-full pointer-events-none" />
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none" />
+
+                    {/* Hero Top Light Effect */}
+                    <HeroBeam />
+
+                    <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-6xl mx-auto">
+
+
+                        {/* Main title — big animated letters like AAROH */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 40 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+                            className="flex flex-col items-center gap-2 mb-6"
+                        >
+                            <span className="text-xl md:text-2xl font-light tracking-[0.6em] uppercase text-neutral-500 mb-0">
+                                aaroh
+                            </span>
+                            
+                            {/* Accessibility H1 for Search Engines */}
+                            <h1 className="sr-only">Aaroh Studios</h1>
+                            
+                            {/* Animated STUDIOS Letters Container */}
+                            <div className="flex gap-2 md:gap-8 text-5xl sm:text-7xl md:text-[10rem] font-black uppercase leading-[0.8] mb-4" style={{ perspective: "1000px" }} aria-hidden="true">
+                                {["S","T","U","D","I","O","S"].map((letter, idx) => (
+                                    <motion.span 
+                                        key={idx}
+                                        className="relative inline-block group cursor-default drop-shadow-[0_10px_20px_rgba(0,0,0,1)]"
+                                        style={{ transformStyle: "preserve-3d" }}
+                                        whileHover={{ rotateY: 180 }}
+                                        transition={{
+                                            type: "spring",
+                                            stiffness: 120,
+                                            damping: 15,
+                                            mass: 1
+                                        }}
                                     >
-                                        {letter}
-                                    </span>
-                                </motion.span>
-                            ))}
-                        </h1>
-                    </motion.div>
+                                        <span className="block bg-clip-text text-transparent bg-gradient-to-b from-white via-neutral-100 to-neutral-400 group-hover:opacity-0 transition-opacity duration-300">
+                                            {letter}
+                                        </span>
+                                        <span 
+                                            className="absolute inset-0 bg-clip-text text-transparent bg-gradient-to-b from-cyan-300 via-indigo-300 to-emerald-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                            style={{ transform: "rotateY(180deg)", backfaceVisibility: "hidden" }}
+                                        >
+                                            {letter}
+                                        </span>
+                                    </motion.span>
+                                ))}
+                            </div>
+                        </motion.div>
 
                     {/* Tagline */}
                     <motion.p
@@ -330,6 +337,7 @@ export function MediaPage() {
             <Footer />
 
             <IdleRobot />
-        </div>
+            </div>
+        </ErrorBoundary>
     );
 }
