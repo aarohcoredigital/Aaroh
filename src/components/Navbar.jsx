@@ -39,9 +39,9 @@ export const Navbar = () => {
       {/* Brand */}
       <Link to="/" onClick={isHome ? scrollToTop : undefined} className="flex items-center gap-1 cursor-pointer group" aria-label="Aaroh Core Digital Home">
         <div className="h-10 w-10 relative shrink-0 flex items-center justify-center -ml-2">
-          <img 
-            src="/logo.png" 
-            alt="Logo" 
+          <img
+            src="/logo.png"
+            alt="Logo"
             className="h-full w-full object-contain scale-[2.2] transition-all duration-500 group-hover:scale-[2.4] drop-shadow-[0_0_15px_rgba(255,100,100,0.3)]"
             onError={(e) => {
               e.target.style.display = 'none';

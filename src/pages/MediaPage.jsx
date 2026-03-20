@@ -167,7 +167,7 @@ export function MediaPage() {
         <ErrorBoundary>
             <div className="bg-black min-h-screen w-full antialiased overflow-x-hidden selection:bg-cyan-500/20 relative">
                 <Helmet>
-                    <title>Aaroh Studios | Video Production & Digital Marketing</title>
+                    <title>AAROH CORE DIGITAL | Studios - Video Production & Digital Marketing</title>
                     <meta name="description" content="Aaroh Studios - Cinematic video production, strategic digital marketing, and high-impact promotions." />
                     <link rel="canonical" href="https://www.aarohcoredigital.com/media" />
                 </Helmet>

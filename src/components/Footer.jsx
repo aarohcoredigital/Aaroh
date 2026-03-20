@@ -46,7 +46,7 @@ export const Footer = () => {
           <div className="flex flex-col gap-6 lg:items-end">
             <span className="text-white font-mono text-[10px] uppercase tracking-[0.3em]">Origin</span>
             <div className="flex flex-col gap-1 lg:items-end text-sm text-neutral-500">
-              <span>Aaroh Core Digital (Aaroh) Transforming ambitious visions into digital reality.</span>
+              <span>AAROH CORE DIGITAL (AAROH) Transforming ambitious visions into digital reality.</span>
               <span>India / IN</span>
               <span className="flex items-center gap-2 mt-4">
                 <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
@@ -58,7 +58,7 @@ export const Footer = () => {
 
         {/* Bottom Credits */}
         <div className="flex flex-col md:flex-row justify-between items-center border-t border-white/5 pt-8 text-[10px] text-neutral-600 uppercase tracking-widest relative z-10">
-          <p className="text-center md:text-left">© 2026 Aaroh Core Digital. All Rights Reserved.</p>
+          <p className="text-center md:text-left">© 2026 AAROH CORE DIGITAL. All Rights Reserved.</p>
           <div className="flex gap-8 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition">Privacy Protocol</a>
             <a href="#" className="hover:text-white transition">Terms of Access</a>

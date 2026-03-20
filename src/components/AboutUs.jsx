@@ -57,7 +57,7 @@ export const AboutUs = () => {
                 >
                     <div className="w-8 h-px bg-cyan-500" />
                     <span className="text-cyan-400 text-xs font-semibold tracking-[0.35em] uppercase">
-                        About Aaroh
+                        About AAROH
                     </span>
                 </motion.div>
 
@@ -85,7 +85,7 @@ export const AboutUs = () => {
                             viewport={{ once: true }}
                             className="text-neutral-400 text-lg leading-relaxed"
                         >
-                            Aaroh Core Digital LLP is a technology-first company built on a singular conviction every ambitious vision deserves the infrastructure to become real.
+                            AAROH CORE DIGITAL LLP is a technology-first company built on a singular conviction every ambitious vision deserves the infrastructure to become real.
                         </motion.p>
                         <motion.p
                             variants={fadeUp}

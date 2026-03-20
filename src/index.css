@@ -23,7 +23,8 @@
     box-sizing: border-box;
   }
 
-  button, a {
+  button,
+  a {
     touch-action: manipulation;
   }
 

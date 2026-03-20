@@ -29,7 +29,7 @@ function HomePage() {
   return (
     <div className="bg-black w-full min-h-screen antialiased overflow-x-hidden selection:bg-cyan-500/30 relative">
       <Helmet>
-        <title>Aaroh Core Digital | Transforming Visions into Reality</title>
+        <title>AAROH CORE DIGITAL | Transforming Visions into Reality</title>
         <meta name="description" content="Aaroh Core Digital - Expert technology solutions, custom ecosystems, and digital engineering to scale your future." />
         <link rel="canonical" href="https://www.aarohcoredigital.com/" />
         
@@ -38,10 +38,10 @@ function HomePage() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Aaroh Core Digital",
+            "name": "AAROH CORE DIGITAL",
             "alternateName": ["Aaroh", "Aaroh Core"],
             "url": "https://www.aarohcoredigital.com",
-            "logo": "https://www.aarohcoredigital.com/logo512.png",
+            "logo": "https://www.aarohcoredigital.com/logo.png",
             "sameAs": [
               "https://www.instagram.com/aaroh_core_digital",
               "https://www.linkedin.com/company/aarohcoredigital"
